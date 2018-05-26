@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agt-gH-I7E">
+                                <rect key="frame" x="84" y="627" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rqi-RO-uIW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yV-N4-NZG">
+                                <rect key="frame" x="10" y="627" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P3l-U6-yx8"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MgZ-4e-nIp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MgZ-4e-nIp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="1ao-6a-cAs"/>
+                            <constraint firstItem="1yV-N4-NZG" firstAttribute="top" secondItem="Agt-gH-I7E" secondAttribute="top" id="2Ge-Bh-JKd"/>
+                            <constraint firstItem="1yV-N4-NZG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="O8m-Oa-YHg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1yV-N4-NZG" secondAttribute="bottom" constant="10" id="P7n-ec-5vb"/>
+                            <constraint firstItem="Agt-gH-I7E" firstAttribute="leading" secondItem="1yV-N4-NZG" secondAttribute="trailing" constant="40" id="ULb-fP-kBC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MgZ-4e-nIp" secondAttribute="bottom" constant="48" id="XAE-we-Ld3"/>
+                            <constraint firstItem="1yV-N4-NZG" firstAttribute="bottom" secondItem="Agt-gH-I7E" secondAttribute="bottom" id="Xjy-UM-6ab"/>
+                            <constraint firstItem="MgZ-4e-nIp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eJA-Kn-0Ov"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="MgZ-4e-nIp" secondAttribute="top" constant="20" id="zza-Oi-qCA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="1yV-N4-NZG" id="myq-bq-8hj"/>
+                        <outlet property="nextButton" destination="Agt-gH-I7E" id="Sp2-XD-2nQ"/>
+                        <outlet property="webView" destination="MgZ-4e-nIp" id="Dsw-bf-8QU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
